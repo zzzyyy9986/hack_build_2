@@ -5,8 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const MainController_1 = require("./controllers/MainController");
+const env_1 = require("./env");
 const app = (0, express_1.default)();
-const port = process.env.PORT || 8000;
+const port = env_1.APP_PORT || 8000;
 const pathToFront = __dirname + "/build/";
 var cors = require("cors");
 let corsOptions = {};
