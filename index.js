@@ -19,7 +19,7 @@ corsOptions = {
 app.use(express_1.default.static(pathToFront));
 app.use(require("express-domain-middleware"));
 app.use(express_1.default.json());
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.get('/', (req, res) => {
     console.log(pathToFront);
     return res.sendFile(pathToFront + '/index.html');
